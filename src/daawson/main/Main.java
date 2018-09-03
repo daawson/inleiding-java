@@ -2,7 +2,6 @@ package daawson.main;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 public class Main{
 
@@ -15,54 +14,66 @@ public class Main{
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.PAGE_AXIS));
 
-        //region JButtons en ActionListeners
-        JButton o21 = new JButton("Opdracht 2.1");
-        o21.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                appm.getContentPane().setBackground(Color.BLUE);
-                appm.setView(0);
+        String[] opdList = {"Opdracht 2.1", "Opdracht 2.2","Opdracht 4.1",
+                            "Opdracht 4.2", "Opdracht 4.3", "Opdracht 4.4",
+                            "Opdracht 4.5", "Opdracht 4.6", "Opdracht 4.7", "Praktijkopdracht"};
+        JComboBox selectorBox = new JComboBox(opdList);
+        selectorBox.setPreferredSize(new Dimension(300, 25));
+        selectorBox.setLightWeightPopupEnabled(false);
+        selectorBox.setOpaque(true);
 
-            }
+        selectorBox.addActionListener(e -> {
+                JComboBox cb = (JComboBox)e.getSource();
+                String opd = (String)cb.getSelectedItem();
+                try{
+                    switch(opd){
+                        case "Opdracht 2.1":
+                            appm.setView(0);
+                            break;
+                        case "Opdracht 2.2":
+                            appm.setView(1);
+                            break;
+                        case "Opdracht 4.1":
+                            appm.setView(2);
+                            break;
+                        case "Opdracht 4.2":
+                            appm.setView(3);
+                            break;
+                        case "Opdracht 4.3":
+                            appm.setView(4);
+                            break;
+                        case "Opdracht 4.4":
+                            appm.setView(5);
+                            break;
+                        case "Opdracht 4.5":
+                            appm.setView(6);
+                            break;
+                        case "Opdracht 4.6":
+                            appm.setView(7);
+                            break;
+                        case "Opdracht 4.7":
+                            appm.setView(8);
+                            break;
+                        case "Praktijkopdracht":
+                            appm.setView(9);
+                            break;
+                        default:
+                            appm.setView(0);
+                            break;
+                    }
+                }catch(NullPointerException ex) {
+                    System.out.print("NPE!");
+                }
         });
-
-        JButton o22 = new JButton("Opdracht 2.2");
-        o22.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                appm.getContentPane().setBackground(Color.BLUE);
-                appm.setView(1);
-
-            }
-        });
-
-        JButton o41 = new JButton("Opdracht 4.1");
-        o41.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                appm.getContentPane().setBackground(Color.white);
-                appm.setView(2);
-
-            }
-        });
-
-        JButton o42 = new JButton("Opdracht 4.2");
-        o42.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                appm.getContentPane().setBackground(Color.white);
-                appm.setView(3);
-
-            }
-        });
-        //endregion
 
         appm.init();
-        mainPanel.add(o21);
-        mainPanel.add(o22);
-        mainPanel.add(o41);
-        mainPanel.add(o42);
+        mainPanel.add(selectorBox);
+        selectorBox.setSelectedIndex(0);
         mainPanel.add(appm);
-        mainPanel.setSize(300, 500);
+        mainPanel.setSize(300, 400);
 
         mainFrame.add(mainPanel);
-        mainFrame.setSize(300,500);
+        mainFrame.setSize(600,425);
         mainFrame.setVisible(true);
 
         appm.setView(0);

@@ -16,7 +16,13 @@ public class AppletMaster extends JApplet{
         JApplet opd22 = new opdracht22();
         JApplet opd41 = new opdracht41();
         JApplet opd42 = new opdracht42();
-        applets = new JApplet[]{opd2,opd22, opd41, opd42};
+        JApplet opd43 = new opdracht43();
+        JApplet opd44 = new opdracht44();
+        JApplet opd45 = new opdracht45();
+        JApplet opd46 = new opdracht46();
+        JApplet opd47 = new opdracht47();
+        JApplet opdfin = new opdrachtFinaal();
+        applets = new JApplet[]{opd2,opd22, opd41, opd42,opd43,opd44, opd45, opd46, opd47, opdfin};
         setView(index);
 
     }

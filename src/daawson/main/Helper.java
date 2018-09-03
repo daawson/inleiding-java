@@ -24,4 +24,10 @@ public class Helper {
 
         return new Polygon(xCoords, yCoords, xCoords.length);
     }
+    //setBackground
+    public static void setCBackground(Graphics g, Color c){
+        g.setColor(c);
+        g.fillRect(0, 0, 1920, 1080);
+    }
+
 }
