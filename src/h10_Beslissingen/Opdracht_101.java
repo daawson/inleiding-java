@@ -3,7 +3,7 @@ package h10_Beslissingen;
 import java.applet.*;
 import java.awt.*;
 
-public class Opdracht_101 extends Applet {
+public class Opdracht_101 extends Applet { // opd 10.1 en 10.2
     private int largest = 0, lowest = 0, current;
     private boolean firstnum = true;
     public void init(){

@@ -3,10 +3,10 @@ package h10_Beslissingen;
 import java.applet.Applet;
 import java.awt.*;
 
-public class Opdracht_103 extends Applet {
+public class Opdracht_103 extends Applet { // opd 10.3 en 10.4
 
     private int[] aDays= {31,28,31,30,31,30,31,31,30,31,30,31};
-    private String[] aMonths= {"Jan", "Feb", "Ma", "Apr", "Mei", "Juni", "Juli", "Aug", "Sep", "Okt", "Nov", "Dec"};
+    private String[] aMonths= {"Jan.", "Feb.", "Mrt.", "Apr.", "Mei.", "Jun.", "Jul.", "Aug.", "Sept.", "Okt.", "Nov.", "Dec."};
     int choosen = 2, aYear = 2020;
 
     public void init(){
@@ -30,21 +30,18 @@ public class Opdracht_103 extends Applet {
         repaint();
     }
     private String GetFormatedDate(){
-        if(choosen > 0 && choosen < 11){
+        if(choosen >= 1 && choosen <= 12){
             String format = "";
-            if(choosen == 2){
-                if(aYear % 4 == 0 && aYear % 100 != 0 || aYear % 400 == 0) {
-                    //System.out.print("ELO PRZESTEMPCO XD");
+            if(choosen == 2){ // if feb.
+                if(aYear % 4 == 0 && aYear % 100 != 0 || aYear % 400 == 0) { // special year.
                     format = "29, " + aMonths[choosen - 1] + " " + aYear;
                 }
                 else {
-                    format = aDays[choosen - 1] + ", " + aMonths[choosen - 1] + " " + aYear;
-                    //System.out.print("ELO POLICJANCIE XD");
+                    format = aDays[choosen - 1] + ", " + aMonths[choosen - 1] + " " + aYear; // just feb 28
                 }
             }
             else{
-                format = aDays[choosen-1]+", "+aMonths[choosen-1]+" "+aYear;
-                //System.out.print("LUZIK ARBUZIK XD");
+                format = aDays[choosen-1]+", "+aMonths[choosen-1]+" "+aYear; // normal year
             }
             return format;
         }
