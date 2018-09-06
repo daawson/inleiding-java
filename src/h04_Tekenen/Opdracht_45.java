@@ -1,11 +1,11 @@
-package opdracht;
+package h04_Tekenen;
 
 import daawson.main.Helper;
 
-import javax.swing.*;
+import java.applet.*;
 import java.awt.*;
 
-public class opdracht45 extends JApplet {
+public class Opdracht_45 extends Applet {
     public void init(){}
     public void paint(Graphics g){
         Helper.setCBackground(g, Color.blue);

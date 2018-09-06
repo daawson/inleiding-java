@@ -1,9 +1,9 @@
-package opdracht;
+package h02_JavaApplet;
 
-import javax.swing.*;
+import java.applet.*;
 import java.awt.*;
 
-public class opdracht22 extends JApplet {
+public class Opdracht_22 extends Applet {
     public void init(){
         setBackground(Color.white);
     }

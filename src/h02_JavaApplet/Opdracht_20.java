@@ -1,13 +1,14 @@
-package opdracht;
+package h02_JavaApplet;
 
 
 import daawson.main.Helper;
 
-import javax.swing.*;
+import java.applet.*;
 import java.awt.*;
 
-public class opdracht2 extends JApplet{
+public class Opdracht_20 extends Applet {
    public void init(){}
+
    public void paint(Graphics g){
        Helper.setCBackground(g, Color.blue);
        g.setColor(Color.yellow);

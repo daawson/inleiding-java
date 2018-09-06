@@ -1,9 +1,9 @@
-package opdracht;
+package h04_Tekenen;
 
-import javax.swing.*;
+import java.applet.*;
 import java.awt.*;
 
-public class opdracht43 extends JApplet {
+public class Opdracht_43 extends Applet {
     public void init(){}
     public void paint(Graphics g){
         int startX = 45;
