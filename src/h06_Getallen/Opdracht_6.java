@@ -52,6 +52,12 @@ public class Opdracht_6 extends Applet {
         DecimalFormat df = new DecimalFormat("#.#");
         df.setRoundingMode(RoundingMode.DOWN);
         g.drawString("Het gemiddelde is: " + df.format(gemiddeld), startX, startY);
+
+        /*
+        String XD = df.format(gemiddeld);
+        double XD2 = Double.parseDouble(XD);
+        System.out.print(XD2);
+        */
         //endregion
 
     }

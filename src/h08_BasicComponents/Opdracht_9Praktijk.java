@@ -29,10 +29,13 @@ public class Opdracht_9Praktijk extends Applet {
         fieldTwo = new TextField("10");
         fieldTwo.setPreferredSize(new Dimension(100, 25));
 
+
         add = new Button("+");
         add.addActionListener(e-> {
             calculateByType(fieldOne, fieldTwo, MathType.Add);
         });
+
+
         sub = new Button("-");
         sub.addActionListener(e-> {
             calculateByType(fieldOne, fieldTwo, MathType.Subtract);

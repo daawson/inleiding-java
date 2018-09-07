@@ -45,7 +45,7 @@ public class Opdracht_105 extends Applet {
                 }
             }
             updateMid = false;
-            gemiddelde = sum / gradeList.size();
+            gemiddelde = sum / (gradeList.size()+1);
             return gemiddelde;
         }else{
             return gemiddelde;
