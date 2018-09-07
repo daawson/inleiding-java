@@ -4,14 +4,13 @@ import java.applet.Applet;
 import java.awt.*;
 
 public class Opdracht_12Praktijk extends Applet {
-    int maxElements = 10;
-    int cElement = 0;
-    int switchCount = 0;
-    boolean readyToPaint = false;
-    String[] names = new String[maxElements];
-    int[] numbers = new int[maxElements];
+    private int maxElements = 10;
+    private int cElement = 0;
+    private boolean readyToPaint = false;
+    private String[] names = new String[maxElements];
+    private int[] numbers = new int[maxElements];
 
-    Label county;
+    private Label county;
 
     public void init(){
         setLayout(new FlowLayout());
