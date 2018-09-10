@@ -5,6 +5,7 @@ import java.awt.geom.Point2D;
 
 public class Helper {
 
+    //region DOESNT MATTER
     //maakt een driehoek in de origin x/y
     public static Polygon createTriangle(float x, float y, float side, boolean invert) {
         float xOff = side / 2f;
@@ -28,6 +29,22 @@ public class Helper {
     public static void setCBackground(Graphics g, Color c){
         g.setColor(c);
         g.fillRect(0, 0, 1920, 1080);
+    }
+    //endregion
+
+    public static void drawWall(Graphics g, Color c, int x, int y, int w, int h){
+        g.setColor(c);
+        g.fillRect(x,y,w,h);
+        g.setColor(Color.black);
+        g.drawRect(x,y,w,h);
+    }
+
+    public static void drawTree(Graphics g, int x, int y, int height){
+        g.setColor(Color.black);
+        g.fillRect(x+height/6, y+height/2, 15, height/2);
+        g.setColor(Color.green);
+        g.fillOval(x,y+10, height/2, height/2);
+
     }
 
 }
