@@ -6,7 +6,8 @@ import java.util.ArrayList;
 
 public class Opdracht_14Praktijk extends Applet {
     private int rockCount = 23;
-    enum State{
+
+    enum State{ //'game state' check enums
        Play, Reset
     }
 
@@ -65,8 +66,8 @@ public class Opdracht_14Praktijk extends Applet {
 
     }
 
-    private void DoMagic(){ // 1,5,9,13,17,21
-        int lastnum = rockCount;
+    private void DoMagic(){ // 1,5,9,13,17,21 magic check
+        int lastnum = rockCount; // last num to hold how many rocks ifs took.
         for (int i = 0; i < focus.size(); i++) {
             int checker = focus.get(i);
             System.out.println(checker);
@@ -95,12 +96,13 @@ public class Opdracht_14Praktijk extends Applet {
             }
         }
 
+        // finish check
         if(rockCount <= 0){
             message.setText("You won! :)");
             CurrentState = State.Reset;
             bOK.setLabel("Reset");
-        }else{
-            message.setText("Current rocks: " + rockCount + " BOT took: " + (lastnum-rockCount) + " rocks!");
+        }else{ // go further
+            message.setText("Current rocks: " + rockCount + " BOT took: " + (lastnum-rockCount) + (((lastnum-rockCount)==1) ? " rock!" : " rocks!"));
         }
     }
 
