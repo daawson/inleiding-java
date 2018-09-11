@@ -7,7 +7,7 @@ import java.applet.Applet;
 import java.awt.*;
 import java.text.DecimalFormat;
 
-public class Opdracht_9Praktijk extends Applet {
+public class Opdracht_8Praktijk extends Applet {
 
     TextField fieldOne, fieldTwo;
     Button add, sub, multiply, divide;
