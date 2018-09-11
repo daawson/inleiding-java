@@ -1,7 +1,5 @@
 package h04_Tekenen;
 
-import daawson.main.Helper;
-
 import javax.swing.*;
 import java.applet.Applet;
 import java.awt.*;
@@ -102,7 +100,6 @@ public class Opdracht_4Praktijk extends Applet {
     }
 
     public void paint(Graphics g){
-        Helper.setCBackground(g, Color.WHITE);
         //MEINE INTES
         int startX = 15, startY = 50;
         int margin = 20;

@@ -1,6 +1,5 @@
 package h13_Methodes;
 
-import daawson.main.Helper;
 
 import java.applet.Applet;
 import java.awt.*;
@@ -17,11 +16,18 @@ public class Opdracht_132 extends Applet {
         for(int x = 0; x < wallWidth; x++){
             for(int y = 0; y < wallHeight; y++){
                 if(y % 2 == 0)
-                    Helper.drawWall(g, Color.red,50+x*brickWidth, 50+y*brickHeight, brickWidth, brickHeight);
+                    drawWall(g, Color.red,50+x*brickWidth, 50+y*brickHeight, brickWidth, brickHeight);
                 else
-                    Helper.drawWall(g, Color.red,25+x*brickWidth, 50+y*brickHeight, brickWidth, brickHeight);
+                    drawWall(g, Color.red,25+x*brickWidth, 50+y*brickHeight, brickWidth, brickHeight);
             }
         }
+    }
+
+    private void drawWall(Graphics g, Color c, int x, int y, int w, int h){
+        g.setColor(c);
+        g.fillRect(x,y,w,h);
+        g.setColor(Color.black);
+        g.drawRect(x,y,w,h);
     }
 
 
