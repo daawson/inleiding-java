@@ -8,11 +8,11 @@ import java.awt.*;
 @SuppressWarnings("Duplicates")
 public class Opdracht_133 extends Applet {
 
-    boolean drawMeABrick = false;
-    boolean drawMeABeton = false;
+    private boolean drawMeABrick = false;
+    private boolean drawMeABeton = false;
 
-    int wallHeight = 8;
-    int wallWidth = 5;
+    private int wallHeight = 8;
+    private int wallWidth = 5;
 
     public void init(){
         Button bBrick = new Button("Brick Wall");

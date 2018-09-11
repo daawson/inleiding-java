@@ -1,23 +1,21 @@
 package h14_Multimedia;
 
-import daawson.main.Helper;
-
 import java.applet.Applet;
 import java.awt.*;
 import java.util.ArrayList;
 
 public class Opdracht_14Praktijk extends Applet {
-    int rockCount = 23;
+    private int rockCount = 23;
     enum State{
        Play, Reset
     }
 
-    State CurrentState = State.Play;
-    TextField input;
-    Label message;
-    Button bOK;
+    private State CurrentState = State.Play;
+    private TextField input;
+    private Label message;
+    private Button bOK;
 
-    ArrayList<Integer> focus = new ArrayList<>();
+    private ArrayList<Integer> focus = new ArrayList<>();
 
     public void init(){
         message = new Label("Write 1, 2 or to play!");
@@ -64,7 +62,7 @@ public class Opdracht_14Praktijk extends Applet {
 
     }
 
-    void DoMagic(){
+    private void DoMagic(){
         //region TEST
         /*
         int closest = Helper.getClosest(focus, rockCount);
@@ -118,7 +116,7 @@ public class Opdracht_14Praktijk extends Applet {
         }
     }
 
-    void ReinitArray(){
+    private void ReinitArray(){
         focus.add(21);focus.add(17);focus.add(13);focus.add(9); focus.add(5); focus.add(1);
     }
 

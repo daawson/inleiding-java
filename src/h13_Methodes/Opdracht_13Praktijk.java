@@ -1,7 +1,5 @@
 package h13_Methodes;
 
-import daawson.main.Helper;
-
 import java.applet.Applet;
 import java.awt.*;
 
@@ -19,7 +17,7 @@ public class Opdracht_13Praktijk extends Applet {
 
     }
 
-    void drawTree(Graphics g, int x, int y, int height){
+    private void drawTree(Graphics g, int x, int y, int height){
         g.setColor(Color.black);
         g.fillRect(x+height/6, y+height/2, 15, height/2);
         g.setColor(Color.green);

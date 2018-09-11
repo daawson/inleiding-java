@@ -4,13 +4,13 @@ import java.applet.Applet;
 import java.awt.*;
 
 public class Opdracht_141 extends Applet {
-    String[] kleur = {"Schoppen", "Harten", "Ruiten", "Klaveren"};
-    String[] num = {"Twee", "Drie", "Vier", "Vijf",
+    private String[] kleur = {"Schoppen", "Harten", "Ruiten", "Klaveren"};
+    private String[] num = {"Twee", "Drie", "Vier", "Vijf",
                     "Zes", "Zeven", "Acht", "Negen",
                     "Tien", "Boer", "Vrouw", "Heer",
                     "Aas"};
 
-    String formatedCard = "";
+    private String formatedCard = "";
     public void init(){
         Button bRandom = new Button("Randomize!");
         bRandom.addActionListener(e->{
@@ -23,7 +23,7 @@ public class Opdracht_141 extends Applet {
         g.drawString(formatedCard, 90,90);
     }
 
-    void randomizeCard(){
+    private void randomizeCard(){
         formatedCard = "";
         double r1 = Math.random();
         int rf = (int)(r1 * 4);

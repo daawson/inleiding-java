@@ -30,7 +30,7 @@ public class Opdracht_124 extends Applet { // opd 12.4 en 12.5
         add(input);
         add(bOK);
     }
-    void CheckForNumber(int a){
+    private void CheckForNumber(int a){
         for(int i : elligableNumbers) {
             if (a == i) {
                 message = "Number "+a+" found on index "+elligableNumbers.indexOf(a);

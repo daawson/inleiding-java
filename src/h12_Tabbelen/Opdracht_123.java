@@ -16,9 +16,7 @@ public class Opdracht_123 extends Applet {
         }
 
         Button bOK = new Button("OK");
-        bOK.addActionListener(e->{
-            RearrangeNumbers();
-        });
+        bOK.addActionListener(e-> RearrangeNumbers());
 
         add(bOK);
     }

@@ -4,8 +4,8 @@ import java.applet.Applet;
 import java.awt.*;
 
 public class Opdracht_119 extends Applet {
-    int cellSize = 32;
-    int gridSize = 8;
+    private int cellSize = 32;
+    private int gridSize = 8;
     public void init(){}
 
     public void paint(Graphics g) {

@@ -39,7 +39,6 @@ public class Helper {
         g.drawRect(x,y,w,h);
     }
 
-
     public static int getClosest(int[] a, int x) {
 
         int low = 0;

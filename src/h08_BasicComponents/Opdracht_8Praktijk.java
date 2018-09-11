@@ -1,7 +1,5 @@
 package h08_BasicComponents;
 
-//import daawson.main.Helper;
-
 import javax.swing.*;
 import java.applet.Applet;
 import java.awt.*;
@@ -9,10 +7,10 @@ import java.text.DecimalFormat;
 
 public class Opdracht_8Praktijk extends Applet {
 
-    TextField fieldOne, fieldTwo;
-    Button add, sub, multiply, divide;
-    Panel holder;
-    JLabel errorLabel = new JLabel("Type een nummer in!"); //in gewone label html werkt niet
+    private TextField fieldOne, fieldTwo;
+    private Button add, sub, multiply, divide;
+    private Panel holder;
+    private JLabel errorLabel = new JLabel("Type een nummer in!"); //in gewone label html werkt niet
     enum MathType{
         Add, Subtract, Multiply, Divide
     }
@@ -31,23 +29,17 @@ public class Opdracht_8Praktijk extends Applet {
 
 
         add = new Button("+");
-        add.addActionListener(e-> {
-            calculateByType(fieldOne, fieldTwo, MathType.Add);
-        });
+        add.addActionListener(e-> calculateByType(fieldOne, fieldTwo, MathType.Add));
 
 
         sub = new Button("-");
-        sub.addActionListener(e-> {
-            calculateByType(fieldOne, fieldTwo, MathType.Subtract);
-        });
+        sub.addActionListener(e-> calculateByType(fieldOne, fieldTwo, MathType.Subtract));
+
         multiply = new Button("*");
-        multiply.addActionListener(e-> {
-            calculateByType(fieldOne, fieldTwo, MathType.Multiply);
-        });
+        multiply.addActionListener(e-> calculateByType(fieldOne, fieldTwo, MathType.Multiply));
+
         divide = new Button("/");
-        divide.addActionListener(e-> {
-            calculateByType(fieldOne, fieldTwo, MathType.Divide);
-        });
+        divide.addActionListener(e-> calculateByType(fieldOne, fieldTwo, MathType.Divide));
 
         holder.add(fieldOne);
         holder.add(fieldTwo);

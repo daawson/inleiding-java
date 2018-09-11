@@ -4,8 +4,8 @@ import java.applet.Applet;
 import java.awt.*;
 
 public class Opdracht_10Praktijk extends Applet {
-    int num = 0;
-    Label info = new Label("Numbers 1-10 only");
+    private int num = 0;
+    private Label info = new Label("Numbers 1-10 only");
     public void init(){
         setLayout(new FlowLayout());
         TextField input = new TextField();

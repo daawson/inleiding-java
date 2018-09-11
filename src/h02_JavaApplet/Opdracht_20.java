@@ -7,10 +7,11 @@ import java.applet.*;
 import java.awt.*;
 
 public class Opdracht_20 extends Applet {
-   public void init(){}
+   public void init(){
+       setBackground(Color.blue);
+   }
 
    public void paint(Graphics g){
-       Helper.setCBackground(g, Color.blue);
        g.setColor(Color.yellow);
        g.drawString("Dawid", 50,50);
    }

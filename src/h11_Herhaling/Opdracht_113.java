@@ -9,7 +9,7 @@ public class Opdracht_113 extends Applet {
     public void init(){
 
         int count = 15;
-        int a = 0, b = 1, c = 0;
+        int a = 0, b = 1, c;
         finaal = finaal.concat(a +","+b);
 
         for(int i = 2; i < count; i++) {

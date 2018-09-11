@@ -12,7 +12,7 @@ public class Opdracht_105 extends Applet {
     private String allGrades ="";
     private boolean updateMid = false;
     private double gemiddelde = 0.0;
-    DecimalFormat df = new DecimalFormat("#.#");
+    private DecimalFormat df = new DecimalFormat("#.#");
     public void init(){
         TextField gradeField = new TextField();
         Button bOK = new Button("OK");

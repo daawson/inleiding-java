@@ -7,10 +7,10 @@ import java.awt.*;
 
 @SuppressWarnings("Duplicates")
 public class Opdracht_132 extends Applet {
-    int wallHeight = 8;
-    int wallWidth = 5;
-    int brickWidth = 50;
-    int brickHeight = 25;
+    private int wallHeight = 8;
+    private int wallWidth = 5;
+    private int brickWidth = 50;
+    private int brickHeight = 25;
 
     public void init(){}
     public void paint(Graphics g){
